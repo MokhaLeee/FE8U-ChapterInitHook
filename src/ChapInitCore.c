@@ -1,10 +1,10 @@
-#include "FE-Clib/include/gbafe.h"
+#include "gbafe.h"
 
-typedef u8 (*ChapterInitFunc) (struct Proc*);
+typedef uint8_t (*ChapterInitFunc) (void*);
 extern ChapterInitFunc ChapterInitFuncList[];
 
-void ChapterInitHook(struct Proc* E_MAPMAIN){
-	extern void MapMain_StartIntroFx(Proc*); //  0x801550D
+void ChapterInitHook(void* E_MAPMAIN){
+	extern void MapMain_StartIntroFx(void*); //  0x801550D
 	
 	ChapterInitFunc* it= ChapterInitFuncList;
 	
