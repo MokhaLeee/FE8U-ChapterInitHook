@@ -1,0 +1,4 @@
+
+ALIGN 4
+ChapterInitFuncList:
+	WORD $0
